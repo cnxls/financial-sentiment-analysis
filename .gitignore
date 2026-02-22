@@ -24,3 +24,12 @@ Thumbs.db
 *.csv
 *.pkl
 logs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files
+*.zip
+*.txt.bak
+data/raw/
