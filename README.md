@@ -5,8 +5,8 @@ A machine learning project that classifies financial news sentences as **positiv
 ## Dataset
 
 [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) by Malo et al. (2014)
-- 4,846 sentences from financial news, annotated by finance professionals
-- 3 classes: neutral (59%), positive (28%), negative (12%)
+- 4,838 sentences from financial news, annotated by finance professionals (after deduplication)
+- 3 classes: neutral (~59%), positive (~28%), negative (~12%)
 
 ## Project Structure
 
