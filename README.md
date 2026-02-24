@@ -1,6 +1,6 @@
 # Financial Sentiment Analysis
 
-A machine learning project that classifies financial news sentences as **positive**, **negative**, or **neutral** sentiment. Built as a portfolio project demonstrating the full ML pipeline — from raw data to a deployed web demo.
+A machine learning project that classifies financial news sentences as **positive**, **negative**, or **neutral** sentiment.
 
 ## Dataset
 
@@ -12,16 +12,23 @@ A machine learning project that classifies financial news sentences as **positiv
 
 ```
 notebooks/
-├── 01-data-loading.ipynb 
-├── 02-eda.ipynb          
+├── 01-data-loading.ipynb     # data ingestion and initial inspection
+├── 02-eda.ipynb              # exploratory data analysis
+├── 03-preprocessing.ipynb    # text cleaning and feature engineering
+└── 04-classical-ml.ipynb     # classical ML models (TF-IDF + classifiers)
+data/
+├── raw/                      # original source files
+└── processed/                # train/valid/test splits + clean_df
 src/
-├── data/                 
-├── features/             
-├── models/               
-└── visualization/        
+├── data/
+├── features/
+├── models/
+└── visualization/
 ```
 
 ## Tech Stack
 
 - **Data:** `pandas`, `datasets` (HuggingFace)
-- **EDA:** `matplotlib`
+- **EDA & visualization:** `matplotlib`, `seaborn`
+- **NLP preprocessing:** `nltk`
+- **Modeling:** `scikit-learn`, `xgboost`
