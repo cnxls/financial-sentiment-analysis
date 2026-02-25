@@ -15,7 +15,7 @@ notebooks/
 ├── 01-data-loading.ipynb     # data ingestion and initial inspection
 ├── 02-eda.ipynb              # exploratory data analysis
 ├── 03-preprocessing.ipynb    # text cleaning and feature engineering
-└── 04-classical-ml.ipynb     # classical ML models (TF-IDF + classifiers)
+└── 04-classical-ml.ipynb     # classical ML models (TF-IDF + Logistic Regression, XGBoost)
 data/
 ├── raw/                      # original source files
 └── processed/                # train/valid/test splits + clean_df
