@@ -26,9 +26,18 @@ src/
 └── visualization/
 ```
 
+## Results (Classical ML)
+
+| Model | Val Macro F1 |
+|---|---|
+| Logistic Regression (baseline) | ~0.61 |
+| Logistic Regression (GridSearchCV) | ~0.68 (CV) / ~0.61 (val) |
+| XGBoost (baseline) | ~0.60 |
+| XGBoost (Optuna, 100 trials) | ~0.63 |
+
 ## Tech Stack
 
 - **Data:** `pandas`, `datasets` (HuggingFace)
 - **EDA & visualization:** `matplotlib`, `seaborn`
 - **NLP preprocessing:** `nltk`
-- **Modeling:** `scikit-learn`, `xgboost`
+- **Modeling:** `scikit-learn`, `xgboost`, `optuna`
