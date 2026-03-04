@@ -15,7 +15,8 @@ notebooks/
 ├── 01-data-loading.ipynb     # data ingestion and initial inspection
 ├── 02-eda.ipynb              # exploratory data analysis
 ├── 03-preprocessing.ipynb    # text cleaning and feature engineering
-└── 04-classical-ml.ipynb     # classical ML models (TF-IDF + Logistic Regression, XGBoost)
+├── 04-classical-ml.ipynb     # TF-IDF + Logistic Regression (GridSearchCV) + XGBoost (Optuna, 100 trials)
+└── 05-finetuned-ml.ipynb     # FinBERT zero-shot evaluation and fine-tuning
 data/
 ├── raw/                      # original source files
 └── processed/                # train/valid/test splits + clean_df
@@ -26,7 +27,7 @@ src/
 └── visualization/
 ```
 
-## Results (Classical ML)
+## Results
 
 | Model | Val Macro F1 |
 |---|---|
@@ -34,10 +35,13 @@ src/
 | Logistic Regression (GridSearchCV) | ~0.68 (CV) / ~0.61 (val) |
 | XGBoost (baseline) | ~0.60 |
 | XGBoost (Optuna, 100 trials) | ~0.63 |
+| FinBERT zero-shot (`ProsusAI/finbert`) | in progress |
+| FinBERT fine-tuned | in progress |
 
 ## Tech Stack
 
 - **Data:** `pandas`, `datasets` (HuggingFace)
 - **EDA & visualization:** `matplotlib`, `seaborn`
 - **NLP preprocessing:** `nltk`
-- **Modeling:** `scikit-learn`, `xgboost`, `optuna`
+- **Classical ML:** `scikit-learn`, `xgboost`, `optuna`
+- **Transformers:** `transformers`, `torch` (FinBERT)
