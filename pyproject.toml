@@ -6,7 +6,7 @@ authors = [
     {name = "cnxls",email = "oles.melinyshyn2007@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<3.15"
 dependencies = [
     "matplotlib (>=3.10.8,<4.0.0)",
     "datasets (>=4.5.0,<5.0.0)",
@@ -18,7 +18,9 @@ dependencies = [
     "xgboost (>=3.2.0,<4.0.0)",
     "jupyter (>=1.1.1,<2.0.0)",
     "optuna (>=4.7.0,<5.0.0)",
-    "joblib (>=1.5.3,<2.0.0)"
+    "joblib (>=1.5.3,<2.0.0)",
+    "torch (>=2.10.0,<3.0.0)",
+    "transformers (>=5.2.0,<6.0.0)"
 ]
 
 
