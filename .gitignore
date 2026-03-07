@@ -23,6 +23,8 @@ Thumbs.db
 # Data / outputs
 *.csv
 *.pkl
+*.pt
+*.pth
 logs/
 
 # Jupyter
