@@ -29,14 +29,30 @@ src/
 
 ## Results
 
-| Model | Val Macro F1 |
-|---|---|
-| Logistic Regression (baseline) | ~0.61 |
-| Logistic Regression (GridSearchCV) | ~0.68 (CV) / ~0.61 (val) |
-| XGBoost (baseline) | ~0.60 |
-| XGBoost (Optuna, 100 trials) | ~0.63 |
-| FinBERT zero-shot (`ProsusAI/finbert`) | in progress |
-| FinBERT fine-tuned | in progress |
+All metrics evaluated on the held-out test set.
+
+| Model | Macro F1 | Weighted F1 | Accuracy |
+|---|---|---|---|
+| LogReg (GridSearchCV) | 0.642 | 0.701 | 0.701 |
+| XGBoost (Optuna) | 0.619 | 0.692 | 0.707 |
+| FinBERT zero-shot | 0.885 | 0.894 | 0.893 |
+| FinBERT fine-tuned | **0.889** | **0.899** | **0.899** |
+
+## Key Findings
+
+- FinBERT zero-shot already outperforms classical ML by ~24 points in macro F1 — domain-specific pre-training matters a lot
+- Fine-tuning adds a further ~0.4 points on top of zero-shot, showing the training data is useful but the base model is already strong
+- Classical models struggle most with the minority class (negative, ~12% of data); FinBERT handles class imbalance much better
+
+## How to Run
+
+```bash
+pip install -r requirements.txt  # or: poetry install
+```
+
+Run notebooks in order: `01` → `02` → `03` → `04` → `05`
+
+> Note: notebook 05 requires a GPU for fine-tuning. To skip training, comment out `epoch_loop()` — the saved checkpoint will be loaded automatically.
 
 ## Tech Stack
 
