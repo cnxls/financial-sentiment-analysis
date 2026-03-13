@@ -20,11 +20,7 @@ notebooks/
 data/
 ├── raw/                      # original source files
 └── processed/                # train/valid/test splits + clean_df
-src/
-├── data/
-├── features/
-├── models/
-└── visualization/
+visualization/                # saved confusion matrix plots
 ```
 
 ## Results
